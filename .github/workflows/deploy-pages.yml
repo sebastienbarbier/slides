@@ -17,9 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: 260505-vibehuus-shellui
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,19 +25,51 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: npm
-          cache-dependency-path: 260505-vibehuus-shellui/package-lock.json
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Build site
+        run: |
+          set -euo pipefail
+          mkdir -p _site
 
-      - name: Add .nojekyll for GitHub Pages
-        run: touch .nojekyll
+          npx --yes marked README.md > _site/body.html
+          cat > _site/index.html <<'EOF'
+          <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>slides</title>
+            <style>
+              body { font-family: system-ui, sans-serif; line-height: 1.5; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; color: #1f5a99; }
+              a { color: #2e72b8; }
+              table { border-collapse: collapse; width: 100%; }
+              th, td { border: 1px solid #8aaed0; padding: 0.5rem 0.75rem; text-align: left; }
+              th { background: #f4f6f9; }
+              code { font-size: 0.9em; }
+            </style>
+          </head>
+          <body>
+          EOF
+          cat _site/body.html >> _site/index.html
+          echo '</body></html>' >> _site/index.html
+          rm _site/body.html
+
+          touch _site/.nojekyll
+
+          for dir in */; do
+            name="${dir%/}"
+            [ -f "$name/index.html" ] || continue
+            [ -f "$name/package.json" ] || continue
+            echo "Building $name…"
+            npm ci --prefix "$name"
+            cp -r "$name" "_site/$name"
+            touch "_site/$name/.nojekyll"
+          done
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 260505-vibehuus-shellui
+          path: _site
 
   deploy:
     needs: build
