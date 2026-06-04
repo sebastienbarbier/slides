@@ -18,7 +18,9 @@
           <div class="title-block">
             <h1 class="title">
               <span class="title-brand">ShellUI:</span>
-              <span class="title-tagline">building webapp from the ground up</span>
+              <span class="title-tagline"
+                >building webapp from the ground up</span
+              >
             </h1>
           </div>
           <footer class="hero-footer">
@@ -35,7 +37,9 @@
           <ul>
             <li class="talk">What ShellUI is — and the problem it solves</li>
             <li class="talk">The philosophy — why we built it this way</li>
-            <li class="talk">Vibe-coding it — my experience shipping with AI</li>
+            <li class="talk">
+              Vibe-coding it — my experience shipping with AI
+            </li>
             <li class="talk">Conclusion — takeaways and what’s next</li>
           </ul>
         </section>
@@ -54,15 +58,25 @@
             />
             <div class="about-me__body">
               <p class="about-me__bio">
-                Full-stack developer, more frontend — React &amp; Python. Based in
-                Zurich. I love building projects — even the ones that never go live
-                or that no one uses.
+                Full-stack developer, more frontend — React &amp; Python. Based
+                in Zurich. I love building projects — even the ones that never
+                go live or that no one uses.
               </p>
               <p>
-                <a href="https://sebastienbarbier.com" target="_blank" rel="noopener noreferrer">sebastienbarbier.com</a>
+                <a
+                  href="https://sebastienbarbier.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >sebastienbarbier.com</a
+                >
               </p>
               <p>
-                <a href="https://github.com/sebastienbarbier" target="_blank" rel="noopener noreferrer">github.com/sebastienbarbier</a>
+                <a
+                  href="https://github.com/sebastienbarbier"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/sebastienbarbier</a
+                >
               </p>
             </div>
           </div>
@@ -82,6 +96,66 @@
             <h2>The philosophy</h2>
             <p class="subtitle">Why we built it this way</p>
           </section>
+          <section>
+            <h2>Architecture</h2>
+            <p class="subtitle">The philosophy</p>
+            <ul>
+              <li class="talk">Microservices + micro-frontends</li>
+              <li class="talk">
+                Minimise dependencies between parts of the stack
+              </li>
+              <li class="talk">
+                A bad change in one place is less likely to break everything
+                else
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Pros</h2>
+            <p class="subtitle">The philosophy</p>
+            <ul>
+              <li class="talk">
+                Smaller codebases — easier to review and for AI context
+              </li>
+              <li class="talk">
+                Limited blast radius when something goes wrong
+              </li>
+              <li class="talk">
+                Deploy and iterate on one service without touching the rest
+              </li>
+              <li class="talk">
+                Clear boundaries — fewer surprise side effects
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Cons</h2>
+            <p class="subtitle">The philosophy</p>
+            <ul>
+              <li class="talk">
+                More moving parts — ops, networking, observability
+              </li>
+              <li class="talk">
+                Harder to trace bugs across service boundaries
+              </li>
+              <li class="talk">
+                Integration and contract testing take more work
+              </li>
+              <li class="talk">
+                Some duplication — types, auth, shared UI patterns
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Separation of concerns</h2>
+            <p class="subtitle">The philosophy</p>
+            <ul>
+              <li class="talk">Main goal: embrace clear boundaries between pieces</li>
+              <li class="talk">Vibe-coding in one area shouldn’t break code somewhere else</li>
+              <li class="talk">Work inside a slice — frontend, API, or worker — with confidence</li>
+              <li class="talk">Room for trash code in a slice — easy to drop when it’s done</li>
+            </ul>
+          </section>
         </section>
 
         <!-- 6 — Vibe-coding (vertical stack) -->
@@ -90,12 +164,57 @@
             <h2>Vibe-coding it</h2>
             <p class="subtitle">Shipping with AI</p>
           </section>
+          <section>
+            <h2>Vibe-coding it</h2>
+            <p class="subtitle">The code</p>
+            <ul>
+              <li class="talk">Goal: spend time on the code, not on the AI</li>
+              <li class="talk">Know the code structure — understand it all</li>
+              <li class="talk">One feature at a time</li>
+              <li class="talk">Review, test, and document every result — pretty aggressive micromanagement</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Vibe-coding it</h2>
+            <p class="subtitle">The AI</p>
+            <ul>
+              <li class="talk">Cheap Cursor plan only — ~20 CHF/month</li>
+              <li class="talk">Didn’t write a single line — all done by prompting</li>
+              <li class="talk">Even typos, color tweaks, and minor fixes went through the agent</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Room for improvement</h2>
+            <p class="subtitle">Vibe-coding it</p>
+            <ul>
+              <li class="talk">Still plenty to optimise in how I work with the agent</li>
+              <li class="talk">Add a skill — encode conventions and workflows for the project</li>
+              <li class="talk">Add an MCP for backend services — safer context, fewer wrong guesses</li>
+            </ul>
+          </section>
         </section>
 
-        <!-- 7 — Conclusion -->
-        <section class="slide-chapter">
-          <h2>Conclusion</h2>
-          <p class="subtitle">Takeaways &amp; what’s next</p>
+        <!-- 7 — Conclusion (vertical stack) -->
+        <section>
+          <section>
+            <h2>Conclusion</h2>
+            <p class="subtitle">Takeaways</p>
+            <ul>
+              <li class="talk">Not for everyone — strict process and real ownership of the code</li>
+              <li class="talk">Not for every project — the extra structure has to earn its keep</li>
+              <li class="talk">Still worth knowing: microservices + micro-frontends shrink blast radius</li>
+              <li class="talk">Useful lens even if you never vibe-code the way I did</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Conclusion</h2>
+            <p class="subtitle">What’s next</p>
+            <ul>
+              <li class="talk">ShellUI stays an experiment — not a blueprint to copy blindly</li>
+              <li class="talk">Borrow the architecture ideas; skip what doesn’t fit your team</li>
+              <li class="talk">Slides on the next slide — questions welcome</li>
+            </ul>
+          </section>
         </section>
 
         <!-- 8 — Thank you -->
@@ -105,8 +224,8 @@
           <div class="thanks-layout">
             <div class="thanks-copy">
               <p class="thanks-hire">
-                Looking for a developer? I’d love to hear about your team — let’s
-                talk about hiring me.
+                Looking for a developer? I’d love to hear about your team —
+                let’s talk about hiring me.
               </p>
             </div>
             <figure class="thanks-qr">
@@ -118,7 +237,12 @@
                 height="320"
               />
               <figcaption>
-                <a href="https://slides.sebastienbarbier.com/260505-vibehuus-shellui/" target="_blank" rel="noopener noreferrer">slides.sebastienbarbier.com</a>
+                <a
+                  href="https://slides.sebastienbarbier.com/260505-vibehuus-shellui/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >slides.sebastienbarbier.com</a
+                >
               </figcaption>
             </figure>
           </div>

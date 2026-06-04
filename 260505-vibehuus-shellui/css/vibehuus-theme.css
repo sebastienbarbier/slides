@@ -85,6 +85,14 @@
 
 .reveal ul li {
   margin-bottom: 0.35em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75em;
+}
+
+.reveal ul li::before {
+  margin-right: 0;
+  flex-shrink: 0;
 }
 
 .reveal strong {

@@ -97,7 +97,8 @@ export function createRiverScene(canvas) {
     g.lineJoin = "round";
     g.beginPath();
     g.moveTo(samples[0].x, samples[0].y);
-    for (let i = 1; i < samples.length; i++) g.lineTo(samples[i].x, samples[i].y);
+    for (let i = 1; i < samples.length; i++)
+      g.lineTo(samples[i].x, samples[i].y);
     g.stroke();
   }
 
@@ -136,7 +137,12 @@ export function createRiverScene(canvas) {
     g.fillRect(0, 0, W, H);
     drawCartography(g);
     const samplesPx = riverSamples.map((s) => ({ x: s.x, y: s.y }));
-    strokeRiver(g, samplesPx, Math.max(28, W * 0.026), "rgba(90, 149, 200, 0.18)");
+    strokeRiver(
+      g,
+      samplesPx,
+      Math.max(28, W * 0.026),
+      "rgba(90, 149, 200, 0.18)",
+    );
     strokeRiver(g, samplesPx, Math.max(22, W * 0.02), "#75ACD2");
   }
 

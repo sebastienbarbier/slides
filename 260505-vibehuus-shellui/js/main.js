@@ -16,6 +16,18 @@ Reveal.initialize({
   margin: 0.04,
 });
 
+/** Strip leading/trailing whitespace from list text (pretty-printed HTML). */
+function trimListItemText() {
+  document.querySelectorAll(".reveal ul li").forEach((li) => {
+    li.normalize();
+    for (const node of li.childNodes) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent = node.textContent.trim();
+      }
+    }
+  });
+}
+
 function isHeroSlideActive() {
   if (!heroSlide || !Reveal.isReady?.()) return false;
   return Reveal.getCurrentSlide() === heroSlide;
@@ -42,6 +54,7 @@ function syncRiverAnimation() {
 }
 
 Reveal.on("ready", () => {
+  trimListItemText();
   syncRiverAnimation();
 
   if (heroSlide && typeof IntersectionObserver !== "undefined") {
