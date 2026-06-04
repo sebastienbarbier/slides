@@ -55,6 +55,7 @@ jobs:
           rm _site/body.html
 
           touch _site/.nojekyll
+          cp CNAME _site/CNAME
 
           for dir in */; do
             name="${dir%/}"

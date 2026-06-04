@@ -2,7 +2,9 @@
 
 HTML presentations built with [reveal.js](https://revealjs.com/).
 
-**Live index:** https://sebastienbarbier.github.io/slides/
+Event site: [vibehuus.be](https://vibehuus.be/)
+
+**Live index:** https://slides.sebastienbarbier.com/
 
 ## Published decks
 
@@ -26,12 +28,23 @@ Open http://localhost:5173
 
 ## GitHub Pages
 
-On every push to `main`, [GitHub Actions](.github/workflows/deploy-pages.yml) publishes:
+On every push to `main`, [GitHub Actions](.github/workflows/deploy-pages.yml) publishes to **https://slides.sebastienbarbier.com/**:
 
 - `/` — this README as HTML
 - `/<folder>/` — each deck (folder name = URL path)
 
-**One-time setup** (repo settings):
+### One-time setup
 
-1. **Settings → Pages → Build and deployment**
-2. Set **Source** to **GitHub Actions**
+**GitHub** (repo **Settings → Pages**):
+
+1. **Build and deployment → Source:** GitHub Actions
+2. **Custom domain:** `slides.sebastienbarbier.com` (should match the [`CNAME`](CNAME) file deployed by the workflow)
+3. Enable **Enforce HTTPS** once DNS is verified
+
+**DNS** (at your domain registrar):
+
+| Type | Name | Value |
+| --- | --- | --- |
+| CNAME | `slides` | `sebastienbarbier.github.io` |
+
+Verification can take a few minutes up to 24 hours.
