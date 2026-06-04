@@ -24,11 +24,21 @@
 }
 
 .reveal .slides section {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* Vertical stack wrappers — no frame (nested slides carry the border) */
+.reveal .slides section:has(> section) {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.reveal .slides section:not(:has(> section)) {
   background: var(--bg);
   border: 2px solid var(--blue);
-  box-sizing: border-box;
   padding: 2.5rem 3rem;
-  height: 100%;
 }
 
 .reveal h1,
