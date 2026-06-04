@@ -60,6 +60,7 @@
 .reveal h2 {
   font-size: 2.5em;
   margin-bottom: 0.05em;
+  margin-top: 50px;
 }
 
 .reveal h3 {
@@ -398,6 +399,143 @@
   border-bottom: none;
   text-transform: lowercase;
   letter-spacing: 0.04em;
+}
+
+.reveal .slide-lead {
+  margin: 0;
+  font-size: 0.68em;
+  line-height: 1.55;
+  max-width: 36em;
+}
+
+.reveal .shellui-today__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  justify-content: flex-start;
+}
+
+.reveal .shellui-today__row .chip {
+  margin: 0;
+  flex: 1 1 10em;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5em;
+}
+
+.reveal .shellui-today__row--packages .chip {
+  flex: 1 1 8em;
+  font-size: 0.44em;
+}
+
+.reveal .shellui-today__row--packages code {
+  border: none;
+  font-size: 1em;
+}
+
+.reveal .shellui-today__row .chip--soon {
+  border-style: dashed;
+  color: var(--blue-dim);
+}
+
+.reveal .shellui-today__opensource {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45em 0.55em;
+  margin: 1.1em 0 0;
+  font-size: 0.55em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reveal .shellui-today__opensource a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+}
+
+.reveal .github-icon {
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.reveal .shellui-today__label {
+  margin: 1.1em 0 0.55em;
+  font-size: 0.38em;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blue-dim);
+}
+
+.reveal .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75em;
+  margin-top: 0.35em;
+  max-width: 100%;
+}
+
+.reveal .feature-grid .chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0.55em 0.5em;
+  font-size: 0.44em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  min-height: 2.75em;
+  box-sizing: border-box;
+}
+
+.reveal .feature-grid .chip--more {
+  border-style: dashed;
+  color: var(--blue-dim);
+}
+
+.reveal .features-note {
+  margin: 1em 0 0;
+  font-size: 0.55em;
+  font-style: italic;
+  color: var(--blue-dim);
+  letter-spacing: 0.04em;
+}
+
+.reveal .backend-apis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-top: 1em;
+}
+
+.reveal .backend-apis .chip {
+  margin: 0;
+  flex: 1 1 8em;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5em;
+}
+
+.reveal .backend-apis .chip--soon {
+  border-style: dashed;
+  color: var(--blue-dim);
+}
+
+.reveal .backend-apis-legend {
+  margin: 0.65em 0 0;
+  font-size: 0.42em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue-dim);
 }
 
 .reveal .chip {

@@ -44,42 +44,64 @@
           </ul>
         </section>
 
-        <!-- 3 — About me -->
-        <section class="slide-about">
-          <h2>Sébastien Barbier</h2>
-          <p class="subtitle">About me</p>
-          <div class="about-me">
-            <img
-              class="about-me__avatar"
-              src="https://sebastienbarbier.com/assets/images/ressources/sebastienbarbier_profile_512.jpg"
-              alt="Portrait of Sébastien Barbier"
-              width="512"
-              height="512"
-            />
-            <div class="about-me__body">
-              <p class="about-me__bio">
-                Full-stack developer, more frontend — React &amp; Python. Based
-                in Zurich. I love building projects — even the ones that never
-                go live or that no one uses.
-              </p>
-              <p>
-                <a
-                  href="https://sebastienbarbier.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >sebastienbarbier.com</a
-                >
-              </p>
-              <p>
-                <a
-                  href="https://github.com/sebastienbarbier"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >github.com/sebastienbarbier</a
-                >
-              </p>
+        <!-- 3 — About me (vertical stack) -->
+        <section>
+          <section class="slide-about">
+            <h2>Sébastien Barbier</h2>
+            <p class="subtitle">About me</p>
+            <div class="about-me">
+              <img
+                class="about-me__avatar"
+                src="https://sebastienbarbier.com/assets/images/ressources/sebastienbarbier_profile_512.jpg"
+                alt="Portrait of Sébastien Barbier"
+                width="512"
+                height="512"
+              />
+              <div class="about-me__body">
+                <p class="about-me__bio">
+                  Full-stack developer, more frontend — React &amp; Python.
+                  Based in Zurich. I love building projects — even the ones that
+                  never go live or that no one uses.
+                </p>
+                <p>
+                  <a
+                    href="https://sebastienbarbier.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >sebastienbarbier.com</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/sebastienbarbier"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >github.com/sebastienbarbier</a
+                  >
+                </p>
+              </div>
             </div>
-          </div>
+          </section>
+          <section>
+            <h2>Why ShellUI?</h2>
+            <p class="subtitle">From building to shipping</p>
+            <ul>
+              <li class="talk">
+                Developers love to build — but struggle to ship
+              </li>
+              <li class="talk fragment">
+                AI changed that: agents let you turn ideas into code very
+                quickly
+              </li>
+              <li class="talk fragment">
+                Every new product still reimplements the same general features
+              </li>
+              <li class="talk fragment">
+                Those features deserve a shared codebase — that’s what I’ve been
+                building with ShellUI
+              </li>
+            </ul>
+          </section>
         </section>
 
         <!-- 4 — ShellUI (vertical stack) -->
@@ -87,6 +109,157 @@
           <section class="slide-chapter">
             <h2>What ShellUI is</h2>
             <p class="subtitle">The problem it solves</p>
+          </section>
+          <section>
+            <h2>Disclaimer</h2>
+            <p class="subtitle">What ShellUI is</p>
+            <ul>
+              <li class="talk fragment">
+                Today it’s a proof of concept — a one-person project, still
+                taking shape
+              </li>
+              <li class="talk fragment">
+                Experimental — expect breaking changes
+              </li>
+              <li class="talk fragment">
+                Not in production — nothing is battle-tested yet
+              </li>
+              <li class="talk fragment">
+                Aiming for a first release later this year — with serious
+                ambition
+              </li>
+              <li class="talk fragment">
+                But it already looks pretty cool… I think
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Microfrontend shell</h2>
+            <p class="subtitle">What ShellUI is</p>
+            <p class="slide-lead">
+              ShellUI is a microfrontend — a wrapper around your app with an
+              opinionated take on basic product features.
+            </p>
+            <ul class="fragment">
+              <li class="talk">The shell is built with React and shadcn/ui</li>
+              <li class="talk">
+                Your app runs in an iframe and communicates with the shell
+                through the postMessage API
+              </li>
+              <li class="talk">
+                Your embed can use any stack — Angular, React, plain HTML, …
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Features</h2>
+            <p class="subtitle">What ShellUI is</p>
+            <div class="feature-grid">
+              <span class="chip">Navigation menu</span>
+              <span class="chip">Toaster</span>
+              <span class="chip">Modal</span>
+              <span class="chip">Drawer</span>
+              <span class="chip">Layout</span>
+              <span class="chip">Theme</span>
+              <span class="chip">i18n</span>
+              <span class="chip">l10n</span>
+              <span class="chip">Offline</span>
+              <span class="chip">Cookie consent</span>
+              <span class="chip">Legals</span>
+              <span class="chip">Software update</span>
+              <span class="chip chip--more">And more</span>
+            </div>
+            <p class="features-note fragment">
+              Honestly? A two-minute demo beats this slide every time.
+            </p>
+          </section>
+          <section>
+            <h2>Shell UI today</h2>
+            <p class="subtitle">What ShellUI is</p>
+            <div class="shellui-today">
+              <div class="shellui-today__row">
+                <span class="chip">Website</span>
+                <span class="chip">Documentation</span>
+                <span class="chip">Playground</span>
+              </div>
+              <p class="shellui-today__label">npm packages</p>
+              <div class="shellui-today__row shellui-today__row--packages">
+                <span class="chip"><code>@shellui/core</code></span>
+                <span class="chip"><code>@shellui/cli</code></span>
+                <span class="chip"><code>@shellui/sdk</code></span>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Needs a backend</h2>
+            <p class="subtitle">What ShellUI is</p>
+            <ul>
+              <li class="talk">
+                The shell is the UI — you still need a backend for real products
+              </li>
+              <li class="talk">
+                Supabase is the popular default — ShellUI supports it out of the
+                box
+              </li>
+              <li class="talk">
+                We also ship a self-hosted Django backend for teams that need
+                deeper, custom integrations
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Backend APIs</h2>
+            <p class="subtitle">What ShellUI is</p>
+            <p class="slide-lead">
+              Shared product features as APIs — so every app does not rebuild
+              the same plumbing.
+            </p>
+            <div class="backend-apis">
+              <span class="chip">Auth</span>
+              <span class="chip chip--soon">File storage</span>
+              <span class="chip chip--soon">LLM Gateway</span>
+            </div>
+            <p class="backend-apis-legend">
+              File storage &amp; LLM Gateway — coming soon
+            </p>
+            <p class="features-note fragment">
+              Same rule as before — let’s look at auth in the demo, not on this
+              slide.
+            </p>
+          </section>
+          <section>
+            <h2>Shell UI today</h2>
+            <p class="subtitle">What ShellUI is</p>
+            <div class="shellui-today">
+              <div class="shellui-today__row">
+                <span class="chip">Website</span>
+                <span class="chip">Documentation</span>
+                <span class="chip">Playground</span>
+              </div>
+              <p class="shellui-today__label">npm packages</p>
+              <div class="shellui-today__row shellui-today__row--packages">
+                <span class="chip"><code>@shellui/core</code></span>
+                <span class="chip"><code>@shellui/cli</code></span>
+                <span class="chip"><code>@shellui/sdk</code></span>
+              </div>
+              <p class="shellui-today__label">Backend &amp; services</p>
+              <div class="shellui-today__row">
+                <span class="chip">Auth backend</span>
+                <span class="chip">Admin panel</span>
+                <span class="chip chip--soon">Files</span>
+                <span class="chip chip--soon">LLM Gateway</span>
+              </div>
+            </div>
+            <p class="shellui-today__opensource">
+              <span>All open source —</span>
+              <a
+                href="https://github.com/shellui"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://github.com/shellui
+              </a>
+            </p>
           </section>
         </section>
 
@@ -150,10 +323,18 @@
             <h2>Separation of concerns</h2>
             <p class="subtitle">The philosophy</p>
             <ul>
-              <li class="talk">Main goal: embrace clear boundaries between pieces</li>
-              <li class="talk">Vibe-coding in one area shouldn’t break code somewhere else</li>
-              <li class="talk">Work inside a slice — frontend, API, or worker — with confidence</li>
-              <li class="talk">Room for trash code in a slice — easy to drop when it’s done</li>
+              <li class="talk">
+                Main goal: embrace clear boundaries between pieces
+              </li>
+              <li class="talk">
+                Vibe-coding in one area shouldn’t break code somewhere else
+              </li>
+              <li class="talk">
+                Work inside a slice — frontend, API, or worker — with confidence
+              </li>
+              <li class="talk">
+                Room for trash code in a slice — easy to drop when it’s done
+              </li>
             </ul>
           </section>
         </section>
@@ -171,7 +352,10 @@
               <li class="talk">Goal: spend time on the code, not on the AI</li>
               <li class="talk">Know the code structure — understand it all</li>
               <li class="talk">One feature at a time</li>
-              <li class="talk">Review, test, and document every result — pretty aggressive micromanagement</li>
+              <li class="talk">
+                Review, test, and document every result — pretty aggressive
+                micromanagement
+              </li>
             </ul>
           </section>
           <section>
@@ -179,17 +363,28 @@
             <p class="subtitle">The AI</p>
             <ul>
               <li class="talk">Cheap Cursor plan only — ~20 CHF/month</li>
-              <li class="talk">Didn’t write a single line — all done by prompting</li>
-              <li class="talk">Even typos, color tweaks, and minor fixes went through the agent</li>
+              <li class="talk">
+                Didn’t write a single line — all done by prompting
+              </li>
+              <li class="talk">
+                Even typos, color tweaks, and minor fixes went through the agent
+              </li>
             </ul>
           </section>
           <section>
             <h2>Room for improvement</h2>
             <p class="subtitle">Vibe-coding it</p>
             <ul>
-              <li class="talk">Still plenty to optimise in how I work with the agent</li>
-              <li class="talk">Add a skill — encode conventions and workflows for the project</li>
-              <li class="talk">Add an MCP for backend services — safer context, fewer wrong guesses</li>
+              <li class="talk">
+                Still plenty to optimise in how I work with the agent
+              </li>
+              <li class="talk">
+                Add a skill — encode conventions and workflows for the project
+              </li>
+              <li class="talk">
+                Add an MCP for backend services — safer context, fewer wrong
+                guesses
+              </li>
             </ul>
           </section>
         </section>
@@ -200,19 +395,16 @@
             <h2>Conclusion</h2>
             <p class="subtitle">Takeaways</p>
             <ul>
-              <li class="talk">Not for everyone — strict process and real ownership of the code</li>
-              <li class="talk">Not for every project — the extra structure has to earn its keep</li>
-              <li class="talk">Still worth knowing: microservices + micro-frontends shrink blast radius</li>
-              <li class="talk">Useful lens even if you never vibe-code the way I did</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Conclusion</h2>
-            <p class="subtitle">What’s next</p>
-            <ul>
-              <li class="talk">ShellUI stays an experiment — not a blueprint to copy blindly</li>
-              <li class="talk">Borrow the architecture ideas; skip what doesn’t fit your team</li>
-              <li class="talk">Slides on the next slide — questions welcome</li>
+              <li class="talk">
+                Not for everyone — strict process and real ownership of the code
+              </li>
+              <li class="talk">
+                Not for every project — the extra structure has to earn its keep
+              </li>
+              <li class="talk">
+                Still worth knowing: microservices + micro-frontends shrink
+                blast radius
+              </li>
             </ul>
           </section>
         </section>
