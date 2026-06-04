@@ -1,0 +1,13 @@
+{
+  "name": "vibehuus-shellui-slides",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Vibehuus-branded reveal.js slides for Shell UI",
+  "scripts": {
+    "start": "npx --yes serve . -l 5173",
+    "dev": "npm run start"
+  },
+  "dependencies": {
+    "reveal.js": "^5.1.0"
+  }
+}

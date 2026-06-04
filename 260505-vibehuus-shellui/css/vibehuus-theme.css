@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --blue: #2e72b8;
+  --blue-deep: #1f5a99;
+  --blue-dim: #8aaed0;
+  --river: #75acd2;
+  --bg: #ffffff;
+  --page: #f4f6f9;
+}
+
+.reveal-viewport {
+  background: var(--page);
+}
+
+.reveal {
+  font-family: "Space Mono", ui-monospace, monospace;
+  font-size: 42px;
+  color: var(--blue);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  background: var(--bg);
+  border: 2px solid var(--blue);
+  box-sizing: border-box;
+  padding: 2.5rem 3rem;
+  height: 100%;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-weight: 400;
+  color: var(--blue);
+  text-transform: none;
+  letter-spacing: -0.005em;
+  line-height: 0.92;
+}
+
+.reveal h1 {
+  font-size: 3.65em;
+}
+
+.reveal h2 {
+  font-size: 2.5em;
+}
+
+.reveal h3 {
+  font-size: 1.65em;
+}
+
+.reveal .subtitle,
+.reveal .eyebrow {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 0.44em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-top: 0.6em;
+}
+
+.reveal .eyebrow {
+  display: block;
+  margin-bottom: 1.1em;
+  color: var(--blue-dim);
+}
+
+.reveal p,
+.reveal li {
+  font-size: 0.8em;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.reveal ul li {
+  margin-bottom: 0.35em;
+}
+
+.reveal strong {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.reveal a {
+  color: var(--blue);
+  border-bottom: 1px solid var(--blue);
+}
+
+.reveal a:hover {
+  color: var(--blue-deep);
+}
+
+.reveal ul {
+  list-style: none;
+}
+
+.reveal ul li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  margin-right: 0.75em;
+  vertical-align: middle;
+  background: var(--bg);
+}
+
+.reveal ul li.talk::before {
+  width: 7px;
+  height: 7px;
+  background: var(--blue);
+  border: none;
+}
+
+.reveal table {
+  font-size: 0.7em;
+  border-collapse: collapse;
+}
+
+.reveal table th,
+.reveal table td {
+  border: 1.5px solid var(--blue);
+  padding: 0.5em 0.9em;
+}
+
+.reveal table th {
+  background: var(--blue);
+  color: var(--bg);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.reveal pre {
+  background: var(--page);
+  border: 1.5px solid var(--blue);
+  box-shadow: none;
+  width: 100%;
+}
+
+.reveal pre code {
+  font-family: "Space Mono", monospace;
+  font-size: 0.6em;
+  line-height: 1.4;
+  color: var(--blue-deep);
+  max-height: 420px;
+}
+
+.reveal blockquote {
+  background: var(--page);
+  border-left: 4px solid var(--blue);
+  padding: 1.2em 1.5em;
+  font-size: 0.82em;
+  line-height: 1.5;
+  font-style: normal;
+  box-shadow: none;
+  width: 90%;
+}
+
+.reveal .caption {
+  font-size: 0.6em;
+  color: var(--blue-dim);
+}
+
+.reveal .progress span {
+  background: var(--blue);
+}
+
+.reveal .controls {
+  color: var(--blue);
+}
+
+/* ── Slide 1: hero with river canvas ── */
+.reveal .slides section.slide-hero {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-hero .river-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.slide-hero canvas#scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-hero .title-block {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
+  width: min(92vw, 1400px);
+  max-width: calc(100% - 48px);
+  pointer-events: none;
+}
+
+.slide-hero .title {
+  margin: 0;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-weight: 400;
+  color: var(--blue);
+  line-height: 0.9;
+  text-shadow:
+    2px 0 0 var(--bg),
+    -2px 0 0 var(--bg),
+    0 2px 0 var(--bg),
+    0 -2px 0 var(--bg);
+}
+
+.slide-hero .title-brand {
+  display: block;
+  font-size: clamp(5rem, 16vw, 11rem);
+  letter-spacing: -0.01em;
+}
+
+.slide-hero .title-tagline {
+  display: block;
+  margin-top: 0.12em;
+  font-size: clamp(2rem, 5.5vw, 4.5rem);
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+}
+
+.slide-hero .hero-footer {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  text-align: center;
+  pointer-events: none;
+  font-family: "Space Mono", monospace;
+  color: var(--blue);
+  text-shadow:
+    2px 0 0 var(--bg),
+    -2px 0 0 var(--bg),
+    0 2px 0 var(--bg),
+    0 -2px 0 var(--bg);
+}
+
+.slide-hero .hero-event {
+  margin: 0;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(1.75rem, 4vw, 3.25rem);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+.slide-hero .hero-speaker {
+  margin: 0.5em 0 0;
+  font-size: clamp(0.95rem, 2vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.slide-hero .hero-date {
+  margin: 0.85em 0 0;
+  font-size: clamp(1.1rem, 2.4vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.reveal .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.reveal .chip {
+  display: inline-block;
+  border: 1.5px solid var(--blue);
+  padding: 0.35em 0.8em;
+  font-size: 0.58em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.reveal .fragment.fade-up {
+  transform: translateY(12px);
+}
