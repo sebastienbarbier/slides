@@ -8,6 +8,7 @@ const river = canvas ? createRiverScene(canvas) : null;
 Reveal.initialize({
   hash: true,
   slideNumber: "c/t",
+  showSlideNumber: "all",
   transition: "fade",
   backgroundTransition: "fade",
   width: 1280,

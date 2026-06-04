@@ -44,31 +44,26 @@
 
 .reveal h1 {
   font-size: 3.65em;
+  margin-bottom: 0.05em;
 }
 
 .reveal h2 {
   font-size: 2.5em;
+  margin-bottom: 0.05em;
 }
 
 .reveal h3 {
   font-size: 1.65em;
 }
 
-.reveal .subtitle,
-.reveal .eyebrow {
+.reveal .subtitle {
   font-family: "Space Mono", monospace;
   font-weight: 400;
-  font-size: 0.44em;
-  letter-spacing: 0.2em;
+  font-size: 0.32em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--blue);
-  margin-top: 0.6em;
-}
-
-.reveal .eyebrow {
-  display: block;
-  margin-bottom: 1.1em;
   color: var(--blue-dim);
+  margin: 0.15em 0 0.85em;
 }
 
 .reveal p,
@@ -168,6 +163,23 @@
 .reveal .caption {
   font-size: 0.6em;
   color: var(--blue-dim);
+}
+
+.reveal .slide-number {
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-dim);
+  background: transparent;
+  padding: 0;
+  right: 1.25rem;
+  bottom: 1rem;
+}
+
+.reveal .slide-number a {
+  color: inherit;
 }
 
 .reveal .progress span {
@@ -284,6 +296,90 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: start;
+}
+
+.reveal .about-me {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.reveal .about-me__avatar {
+  display: block;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+
+.reveal .about-me__body p {
+  margin: 0 0 0.65em;
+}
+
+.reveal .about-me__bio {
+  margin: 0 0 1em;
+  font-size: 0.62em;
+  line-height: 1.55;
+  max-width: 28em;
+}
+
+.reveal .about-me__body p:not(.about-me__bio) {
+  font-size: 0.72em;
+}
+
+.reveal .about-me__body p:last-child {
+  margin-bottom: 0;
+}
+
+.reveal .thanks-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+.reveal .thanks-hire {
+  margin: 0;
+  font-size: 0.68em;
+  line-height: 1.55;
+  max-width: 22em;
+}
+
+.reveal .thanks-qr {
+  margin: 0;
+  text-align: center;
+}
+
+.reveal .thanks-qr-label {
+  margin: 0 0 0.6em;
+  font-size: 0.52em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.reveal .thanks-qr img {
+  display: block;
+  width: 280px;
+  height: 280px;
+  border: 2px solid var(--blue);
+}
+
+.reveal .thanks-qr figcaption {
+  margin-top: 0.65em;
+  font-size: 0.5em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.reveal .thanks-qr figcaption a {
+  border-bottom: none;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
 }
 
 .reveal .chip {
