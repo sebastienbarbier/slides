@@ -140,13 +140,15 @@
               ShellUI is a microfrontend — a wrapper around your app with an
               opinionated take on basic product features.
             </p>
-            <ul class="fragment">
-              <li class="talk">The shell is built with React and shadcn/ui</li>
-              <li class="talk">
+            <ul>
+              <li class="talk fragment">
+                The shell is built with React and shadcn/ui
+              </li>
+              <li class="talk fragment">
                 Your app runs in an iframe and communicates with the shell
                 through the postMessage API
               </li>
-              <li class="talk">
+              <li class="talk fragment">
                 Your embed can use any stack — Angular, React, plain HTML, …
               </li>
             </ul>
@@ -178,15 +180,30 @@
             <p class="subtitle">What ShellUI is</p>
             <div class="shellui-today">
               <div class="shellui-today__row">
-                <a class="chip chip--link" href="https://shellui.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="chip chip--link"
+                  href="https://shellui.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span class="chip__label">Website</span>
                   <span class="chip__url">shellui.com</span>
                 </a>
-                <a class="chip chip--link" href="https://docs.shellui.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="chip chip--link"
+                  href="https://docs.shellui.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span class="chip__label">Documentation</span>
                   <span class="chip__url">docs.shellui.com</span>
                 </a>
-                <a class="chip chip--link" href="https://playground.shellui.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="chip chip--link"
+                  href="https://playground.shellui.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span class="chip__label">Playground</span>
                   <span class="chip__url">playground.shellui.com</span>
                 </a>
@@ -241,15 +258,30 @@
             <p class="subtitle">What ShellUI is</p>
             <div class="shellui-today">
               <div class="shellui-today__row">
-                <a class="chip chip--link" href="https://shellui.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="chip chip--link"
+                  href="https://shellui.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span class="chip__label">Website</span>
                   <span class="chip__url">shellui.com</span>
                 </a>
-                <a class="chip chip--link" href="https://docs.shellui.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="chip chip--link"
+                  href="https://docs.shellui.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span class="chip__label">Documentation</span>
                   <span class="chip__url">docs.shellui.com</span>
                 </a>
-                <a class="chip chip--link" href="https://playground.shellui.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="chip chip--link"
+                  href="https://playground.shellui.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span class="chip__label">Playground</span>
                   <span class="chip__url">playground.shellui.com</span>
                 </a>
@@ -262,11 +294,21 @@
               </div>
               <p class="shellui-today__label">Backend &amp; services</p>
               <div class="shellui-today__row">
-                <a class="chip chip--link" href="https://id.shellui.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="chip chip--link"
+                  href="https://id.shellui.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span class="chip__label">Auth backend</span>
                   <span class="chip__url">id.shellui.com</span>
                 </a>
-                <a class="chip chip--link" href="https://admin.shellui.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="chip chip--link"
+                  href="https://admin.shellui.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span class="chip__label">Admin panel</span>
                   <span class="chip__url">admin.shellui.com</span>
                 </a>
@@ -320,13 +362,13 @@
               <li class="talk">
                 Smaller codebases — easier to review and for AI context
               </li>
-              <li class="talk">
+              <li class="talk fragment">
                 Limited blast radius when something goes wrong
               </li>
-              <li class="talk">
+              <li class="talk fragment">
                 Deploy and iterate on one service without touching the rest
               </li>
-              <li class="talk">
+              <li class="talk fragment">
                 Clear boundaries — fewer surprise side effects
               </li>
             </ul>
@@ -338,13 +380,13 @@
               <li class="talk">
                 More moving parts — ops, networking, observability
               </li>
-              <li class="talk">
+              <li class="talk fragment">
                 Harder to trace bugs across service boundaries
               </li>
-              <li class="talk">
+              <li class="talk fragment">
                 Integration and contract testing take more work
               </li>
-              <li class="talk">
+              <li class="talk fragment">
                 Some duplication — types, auth, shared UI patterns
               </li>
             </ul>
@@ -422,8 +464,10 @@
             <p class="subtitle">The code</p>
             <ul>
               <li class="talk">Goal: spend time on the code, not on the AI</li>
-              <li class="talk fragment">Know the code structure — understand it all</li>
               <li class="talk fragment">One feature at a time</li>
+              <li class="talk fragment">
+                Know the code structure — understand it all
+              </li>
               <li class="talk fragment">
                 Review, test, and document every result — pretty aggressive
                 micromanagement
@@ -450,11 +494,11 @@
               <li class="talk">
                 Still plenty to optimise in how I work with the agent
               </li>
-              <li class="talk">
-                Add a skill — encode conventions and workflows for the project
+              <li class="talk fragment">
+                Add skills — encode conventions and workflows for the project
               </li>
-              <li class="talk">
-                Add an MCP for backend services — safer context, fewer wrong
+              <li class="talk fragment">
+                Add MCPs for backend services — safer context, fewer wrong
                 guesses
               </li>
             </ul>
