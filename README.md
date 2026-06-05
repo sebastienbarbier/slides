@@ -8,9 +8,9 @@ Event site: [vibehuus.be](https://vibehuus.be/)
 
 ## Published decks
 
-| Deck | URL |
-| --- | --- |
-| ShellUI — building webapp from the ground up | [260505-vibehuus-shellui/](260505-vibehuus-shellui/) |
+| Deck                                         | URL                                                  |
+| -------------------------------------------- | ---------------------------------------------------- |
+| ShellUI — building webapp from the ground up | [260605-vibehuus-shellui/](260605-vibehuus-shellui/) |
 
 To add a deck: create a folder with `index.html` and `package.json`, then add a row to the table above.
 
@@ -19,7 +19,7 @@ To add a deck: create a folder with `index.html` and `package.json`, then add a 
 **Single deck:**
 
 ```bash
-cd 260505-vibehuus-shellui
+cd 260605-vibehuus-shellui
 npm install
 npm start
 ```
@@ -43,8 +43,8 @@ On every push to `main`, [GitHub Actions](.github/workflows/deploy-pages.yml) pu
 
 **DNS** (at your domain registrar):
 
-| Type | Name | Value |
-| --- | --- | --- |
+| Type  | Name     | Value                        |
+| ----- | -------- | ---------------------------- |
 | CNAME | `slides` | `sebastienbarbier.github.io` |
 
 Verification can take a few minutes up to 24 hours.
