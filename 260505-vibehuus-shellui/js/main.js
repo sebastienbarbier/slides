@@ -1,4 +1,5 @@
 import Reveal from "../node_modules/reveal.js/dist/reveal.esm.js";
+import Notes from "../node_modules/reveal.js/plugin/notes/notes.esm.js";
 import { createRiverScene } from "./river-scene.js";
 
 const canvas = document.getElementById("scene");
@@ -16,6 +17,7 @@ Reveal.initialize({
   margin: 0.04,
   pdfSeparateFragments: false,
   pdfMaxPagesPerSlide: 1,
+  plugins: [Notes],
 });
 
 /** Strip leading/trailing whitespace from list text (pretty-printed HTML). */
