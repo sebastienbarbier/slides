@@ -14,6 +14,8 @@ Reveal.initialize({
   width: 1280,
   height: 720,
   margin: 0.04,
+  pdfSeparateFragments: false,
+  pdfMaxPagesPerSlide: 1,
 });
 
 /** Strip leading/trailing whitespace from list text (pretty-printed HTML). */

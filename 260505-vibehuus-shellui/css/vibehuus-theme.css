@@ -608,3 +608,179 @@
 .reveal .fragment.fade-up {
   transform: translateY(12px);
 }
+
+/* ── PDF / print export ──
+   Reveal.js: open with ?print-pdf, then Cmd+P → Save as PDF
+   (Landscape, Margins: None, Background graphics: on) */
+
+html.reveal-print,
+html.reveal-print * {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+html.reveal-print .reveal-viewport {
+  background: var(--page);
+}
+
+html.reveal-print .reveal {
+  color: var(--blue);
+}
+
+html.reveal-print .reveal .fragment {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+/* Reveal moves each slide into a .pdf-page wrapper — frame the page, pad inside */
+html.reveal-print .reveal .slides .pdf-page {
+  box-sizing: border-box !important;
+  border: 2px solid var(--blue) !important;
+  background: var(--bg) !important;
+}
+
+html.reveal-print .reveal .slides .pdf-page > section {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 2.5rem 3rem !important;
+  border: none !important;
+  background: transparent !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+html.reveal-print .reveal .slides .pdf-page > section.slide-hero {
+  padding: 0 !important;
+}
+
+html.reveal-print .slide-hero .river-wrap {
+  display: none;
+}
+
+html.reveal-print .reveal h1,
+html.reveal-print .reveal h2,
+html.reveal-print .reveal h3,
+html.reveal-print .reveal p,
+html.reveal-print .reveal li,
+html.reveal-print .reveal .subtitle,
+html.reveal-print .reveal .slide-lead,
+html.reveal-print .reveal .features-note {
+  color: var(--blue) !important;
+}
+
+html.reveal-print .reveal .subtitle,
+html.reveal-print .reveal .chip__url,
+html.reveal-print .reveal .chip__meta,
+html.reveal-print .reveal .shellui-today__label,
+html.reveal-print .reveal .backend-apis-legend,
+html.reveal-print .reveal .feature-grid .chip--more,
+html.reveal-print .reveal .shellui-today__row .chip--soon,
+html.reveal-print .reveal .backend-apis .chip--soon {
+  color: var(--blue-dim) !important;
+}
+
+html.reveal-print .reveal a:not(.chip) {
+  color: var(--blue) !important;
+  border-bottom: 1px solid var(--blue) !important;
+}
+
+html.reveal-print .reveal ul li::before {
+  border-color: var(--blue);
+}
+
+html.reveal-print .reveal ul li.talk::before {
+  background: var(--blue);
+}
+
+html.reveal-print .reveal .chip {
+  border: 1.5px solid var(--blue) !important;
+  color: var(--blue) !important;
+}
+
+html.reveal-print .reveal a.chip.chip--link {
+  border: 1.5px solid var(--blue) !important;
+  border-bottom: 1.5px solid var(--blue) !important;
+  text-decoration: none !important;
+  color: var(--blue) !important;
+}
+
+html.reveal-print .reveal table th {
+  background: var(--blue) !important;
+  color: var(--bg) !important;
+}
+
+html.reveal-print .reveal table th,
+html.reveal-print .reveal table td {
+  border-color: var(--blue) !important;
+}
+
+html.reveal-print .reveal pre {
+  background: var(--page) !important;
+  border-color: var(--blue) !important;
+}
+
+html.reveal-print .reveal aside.notes {
+  display: none !important;
+}
+
+/* Fallback when printing without ?print-pdf (overrides reveal paper.scss) */
+@media print {
+  html:not(.print-pdf),
+  html:not(.print-pdf) * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  html:not(.print-pdf) .reveal h1,
+  html:not(.print-pdf) .reveal h2,
+  html:not(.print-pdf) .reveal h3,
+  html:not(.print-pdf) .reveal h4,
+  html:not(.print-pdf) .reveal h5,
+  html:not(.print-pdf) .reveal h6,
+  html:not(.print-pdf) .reveal p,
+  html:not(.print-pdf) .reveal li,
+  html:not(.print-pdf) .reveal td {
+    color: var(--blue) !important;
+  }
+
+  html:not(.print-pdf) .reveal a:link,
+  html:not(.print-pdf) .reveal a:visited {
+    color: var(--blue) !important;
+    font-weight: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--blue);
+  }
+
+  html:not(.print-pdf) .reveal .fragment {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  html.print-pdf .reveal .slides .pdf-page,
+  html:not(.print-pdf) .reveal .slides .pdf-page {
+    box-sizing: border-box !important;
+    border: 2px solid var(--blue) !important;
+    background: var(--bg) !important;
+  }
+
+  html.print-pdf .reveal .slides .pdf-page > section,
+  html:not(.print-pdf) .reveal .slides .pdf-page > section {
+    padding: 2.5rem 3rem !important;
+    border: none !important;
+    box-sizing: border-box !important;
+  }
+
+  html.print-pdf .reveal .chip,
+  html.print-pdf .reveal a.chip.chip--link,
+  html:not(.print-pdf) .reveal .chip,
+  html:not(.print-pdf) .reveal a.chip.chip--link {
+    border: 1.5px solid var(--blue) !important;
+    border-bottom: 1.5px solid var(--blue) !important;
+    color: var(--blue) !important;
+  }
+}
