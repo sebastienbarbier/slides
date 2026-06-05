@@ -304,12 +304,12 @@
             <p class="subtitle">The philosophy</p>
             <ul>
               <li class="talk">Microservices + micro-frontends</li>
-              <li class="talk">
-                Minimise dependencies between parts of the stack
+              <li class="talk fragment">
+                Every service exposes a clear, defined interface — I know what
+                it does, and that's the only surface I need to care about
               </li>
-              <li class="talk">
-                A bad change in one place is less likely to break everything
-                else
+              <li class="talk fragment">
+                Those APIs are versioned, tested, and not supposed to break
               </li>
             </ul>
           </section>
@@ -348,6 +348,48 @@
                 Some duplication — types, auth, shared UI patterns
               </li>
             </ul>
+            <aside class="notes">
+              <p>
+                <strong>Ops</strong> = operations — keeping software running in
+                production (not building features).
+              </p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Term</th>
+                    <th>What it means</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Ops</strong></td>
+                    <td>
+                      Deploying, scaling, monitoring, and fixing services;
+                      configs, secrets, uptime, rollbacks, on-call
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Networking</strong></td>
+                    <td>
+                      Services talk over the network (HTTP, queues, etc.) —
+                      latency, timeouts, retries, service discovery
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Observability</strong></td>
+                    <td>
+                      Logs, metrics, and tracing across many services when
+                      something breaks
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                One monolith = one thing to deploy and watch. Many microservices
+                = many deploy pipelines and health checks — more operational
+                burden.
+              </p>
+            </aside>
           </section>
           <section>
             <h2>Separation of concerns</h2>
@@ -356,13 +398,13 @@
               <li class="talk">
                 Main goal: embrace clear boundaries between pieces
               </li>
-              <li class="talk">
+              <li class="talk fragment">
                 Vibe-coding in one area shouldn’t break code somewhere else
               </li>
-              <li class="talk">
+              <li class="talk fragment">
                 Work inside a slice — frontend, API, or worker — with confidence
               </li>
-              <li class="talk">
+              <li class="talk fragment">
                 Room for trash code in a slice — easy to drop when it’s done
               </li>
             </ul>
