@@ -1,0 +1,26 @@
+{
+  "name": "shellui-pitch-openslide",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.33.3",
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "dev": "open-slide dev",
+    "build": "open-slide build",
+    "preview": "open-slide preview",
+    "sync:skills": "open-slide sync:skills"
+  },
+  "slidesPages": {
+    "output": "dist"
+  },
+  "dependencies": {
+    "@open-slide/core": "^2.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5"
+  }
+}
